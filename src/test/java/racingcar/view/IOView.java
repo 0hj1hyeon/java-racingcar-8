@@ -27,4 +27,9 @@ public class IOView {
         return "-".repeat(position);
     }
 
+    public void printWinners(List<String> winnerNames) {
+        String result = String.join(", ", winnerNames);
+        System.out.println("최종 우승자 : " + result);
+    }
+
 }
