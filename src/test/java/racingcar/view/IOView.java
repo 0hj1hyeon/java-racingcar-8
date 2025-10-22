@@ -1,6 +1,9 @@
 package racingcar.view;
 
 import camp.nextstep.edu.missionutils.Console;
+import racingcar.domain.Car;
+
+import java.util.List;
 
 public class IOView {
     public String inputCarNames() {
@@ -8,8 +11,20 @@ public class IOView {
         return Console.readLine();
     }
 
-   public String inputTryCount(){
+    public String inputTryCount(){
         System.out.println("시도할 횟수는 몇 회인가요?");
         return Console.readLine();
     }
+
+    public void printRaceStatus(List<Car> cars){
+        for (Car car : cars) {
+            System.out.println(car.getName() + " : " + repeatHyphen(car.getPosition()));
+        }
+        System.out.println();
+    }
+
+    private String repeatHyphen(int position) {
+        return "-".repeat(position);
+    }
+
 }
