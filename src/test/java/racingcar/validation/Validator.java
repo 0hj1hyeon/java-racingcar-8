@@ -13,4 +13,16 @@ public class Validator {
         }
 
     }
+
+    public static void validateTryCount(String input) {
+
+        int count;
+        try {
+            count = Integer.parseInt(input);
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException("시도 횟수는 숫자여야 합니다.");
+        }
+
+    }
+
 }
