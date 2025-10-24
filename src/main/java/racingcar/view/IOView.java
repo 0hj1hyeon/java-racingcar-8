@@ -16,6 +16,10 @@ public class IOView {
         return Console.readLine();
     }
 
+    public void printResultMessage() {
+        System.out.println("\n실행 결과");
+    }
+
     public void printRaceStatus(List<Car> cars){
         for (Car car : cars) {
             System.out.println(car.getName() + " : " + repeatHyphen(car.getPosition()));
