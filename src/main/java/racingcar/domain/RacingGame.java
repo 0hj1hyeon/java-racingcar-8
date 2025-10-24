@@ -16,4 +16,10 @@ public class RacingGame {
         }
         this.cars = carList;
     }
+    public void raceOneTurn() {
+        for (Car car : cars) {
+            int randomNumber = Randoms.pickNumberInRange(0, 9);
+            car.move(randomNumber);
+        }
+    }
 }
