@@ -1,7 +1,13 @@
 package racingcar;
 
+import racingcar.controller.GameExecutor;
+import racingcar.controller.GameSetupProcessor;
+import racingcar.controller.RacingGameController;
+import racingcar.view.IOView;
+
 public class Application {
     public static void main(String[] args) {
-        // TODO: 프로그램 구현
+        RacingGameController gameController = new RacingGameController();
+        gameController.run();
     }
 }
