@@ -16,4 +16,11 @@ public class InputParser {
         return carNames;
     }
 
+    public static int parseTryCount(String inputTryCount) {
+
+        Validator.validateTryCount(inputTryCount);
+        return Integer.parseInt(inputTryCount);
+
+    }
+
 }
