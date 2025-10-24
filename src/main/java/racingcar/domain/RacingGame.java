@@ -4,6 +4,7 @@ import camp.nextstep.edu.missionutils.Randoms;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class RacingGame {
 
@@ -21,5 +22,17 @@ public class RacingGame {
             int randomNumber = Randoms.pickNumberInRange(0, 9);
             car.move(randomNumber);
         }
+    }
+    public List<String> determineWinners() {
+
+        int maxPosition = cars.stream()
+                .mapToInt(Car::getPosition)
+                .max()
+                .orElse(0);
+
+        return cars.stream()
+                .filter(car -> car.getPosition() == maxPosition)
+                .map(Car::getName)
+                .collect(Collectors.toList());
     }
 }
