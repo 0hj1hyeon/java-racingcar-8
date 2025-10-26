@@ -12,14 +12,25 @@ public class GameExecutor {
     }
 
     public void startRace(RacingGame game, int tryCount) {
-        view.printResultMessage();
+        printStartMessage();
+
         for (int i = 0; i < tryCount; i++) {
-            game.raceOneTurn();
-            view.printRaceStatus(game.getCars());
+            runOneTurn(game);
         }
+
+        printWinners(game);
     }
 
-    public void printWinners(RacingGame game) {
+    private void runOneTurn(RacingGame game) {
+        game.raceOneTurn();
+        view.printRaceStatus(game.getCars());
+    }
+
+    private void printStartMessage() {
+        view.printResultMessage();
+    }
+
+    private void printWinners(RacingGame game) {
         view.printWinners(game.determineWinners());
     }
 }
