@@ -18,7 +18,7 @@ public class GameSetupProcessor {
         return new RacingGame(carNames);
     }
 
-    public int inputTryCount(){
+    public int inputTryCount() {
         return InputParser.parseTryCount(view.inputTryCount());
     }
 }

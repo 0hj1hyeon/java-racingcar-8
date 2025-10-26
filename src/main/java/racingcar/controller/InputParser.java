@@ -1,6 +1,7 @@
 package racingcar.controller;
 
 import racingcar.validation.Validator;
+
 import java.util.Arrays;
 import java.util.List;
 

@@ -8,7 +8,7 @@ public class RacingGameController {
     private final GameSetupProcessor setupProcessor = new GameSetupProcessor(view);
     private final GameExecutor executor = new GameExecutor(view);
 
-    public void run(){
+    public void run() {
         RacingGame game = setupProcessor.setupGame();
         int tryCount = setupProcessor.inputTryCount();
         executor.startRace(game, tryCount);

@@ -11,7 +11,7 @@ public class IOView {
         return Console.readLine();
     }
 
-    public String inputTryCount(){
+    public String inputTryCount() {
         System.out.println("시도할 횟수는 몇 회인가요?");
         return Console.readLine();
     }
@@ -20,7 +20,7 @@ public class IOView {
         System.out.println("\n실행 결과");
     }
 
-    public void printRaceStatus(List<Car> cars){
+    public void printRaceStatus(List<Car> cars) {
         for (Car car : cars) {
             System.out.println(car.getName() + " : " + repeatHyphen(car.getPosition()));
         }
