@@ -14,7 +14,6 @@ public class GameSetupProcessor {
     }
 
     public RacingGame setupGame() {
-
         List<String> carNames = InputParser.parseCarNames(view.inputCarNames());
         return new RacingGame(carNames);
     }
